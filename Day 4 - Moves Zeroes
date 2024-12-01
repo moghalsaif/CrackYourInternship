@@ -1,0 +1,14 @@
+class Solution:
+    def moveZeroes(self, nums):
+        n = len(nums)
+        non_zero_pos = 0
+
+        
+        for i in range(n):
+            if nums[i] != 0:
+                nums[non_zero_pos] = nums[i]
+                non_zero_pos += 1
+
+
+        for i in range(non_zero_pos, n):
+            nums[i] = 0
